@@ -1,4 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #f6f6f6;}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #f6f6f6;
+}
+
+.mat-flat-button.mat-primary {
+  background: linear-gradient(45deg, #639ad5, #6563d5) !important;
+  color: #fff !important;
+}
+
+.mat-flat-button.mat-accent {
+  background: linear-gradient(45deg, #1fc58b, #1facc5) !important;
+  color: #fff !important;
+}
+
+.mat-flat-button {
+  border-radius: 1.25rem !important;
+  margin: 0.75rem 0;
+  margin-right: 0.5rem !important;
+}

@@ -1,21 +1,21 @@
 <section>
     <div class="image-container">
         <div>
-            <img class="img" src={{box?.iconUrl}}>
+            <img class="image" src={{box?.iconUrl}}>
         </div>
         <div>
             <h1>{{box?.name}}</h1>
-            <span class="whole">€{{getInt(box?.cost)}}</span>
-            <span class="remainder">.{{getAfterDecimal(box?.cost)}}</span>
+            <span class="texts__whole">€{{getInt(box?.cost)}}</span>
+            <span class="texts__remainder">.{{getAfterDecimal(box?.cost)}}</span>
         </div>
     </div>
     <div class="info">
-        <div class="icons-info"><b class="text">Helpful hints</b></div>
-        <section class="ctas">
-            <button mat-flat-button color="primary">
+        <div class="info__icons"><b class="text">Helpful hints</b></div>
+        <section class="info__ctas">
+            <button mat-flat-button color="primary" class="info__button">
                 <span class="mat-button-wrapper"> Purchase box </span>
             </button>
-            <button mat-flat-button color="accent">
+            <button mat-flat-button color="accent" class="info__button">
                 <span class="mat-button-wrapper"> Probably Fair </span>
             </button>
         </section>
