@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 import { BoxService } from 'src/app/shared/box.service';
+import { BoxMetaModel } from 'src/app/shared/models/box-meta.model';
 
 @Component({
     selector: 'app-box-meta',
@@ -11,7 +12,7 @@ export class BoxMetaComponent implements OnInit {
 
     constructor(private api: BoxService) {}
 
-    box: any;
+    box: BoxMetaModel;
     ngOnInit() {
         this.api.getBoxMeta().subscribe(res => {
             this.box = res;

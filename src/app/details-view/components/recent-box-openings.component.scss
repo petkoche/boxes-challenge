@@ -1,0 +1,106 @@
+$viewPort: 200px;
+$imageSize: 100px;
+
+.virtual-scroll {
+  &__viewport {
+    height: $viewPort;
+    width: 100%;
+    bottom: 25px;
+    .cdk-virtual-scroll-content-wrapper {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  &__item {
+    width: $viewPort;
+    height: 100%;
+    writing-mode: vertical-lr;
+  }
+}
+
+.container-box {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+
+  &_item {
+    max-width: $viewPort;
+  }
+  
+  &__img-user {
+    position: absolute;
+    height: 30px;
+    border-radius: 50%;
+    width: 30px;
+    cursor: pointer;
+    top: calc(50% - 18px);
+    right: 50px;
+    z-index: 999;
+    border: #fff;
+    border-width: 2px;
+    border-style: solid;
+  }
+
+  &__label {
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.6);
+    padding: 0.25rem 0 0 1rem;
+  }
+
+  &__rarity {
+    width: 3px;
+    height: 90%;
+    margin: 5% 0 0;
+    border-radius: 1rem;
+
+    &__bg {
+      background: #84579d;
+    }
+  }
+}
+
+.img{
+  &__rotate{
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+  &__product{
+    max-width: $imageSize;
+    max-height: $imageSize;
+    margin: auto;
+  }
+  &__wrap{
+    min-height: $imageSize;
+    min-width: $imageSize;
+    padding: 40px;
+  }
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+::-webkit{
+  &-scrollbar {
+    width: 0px;
+    height: 5px;
+    &-track {
+      background: #f1f1f1;
+    }
+    &-thumb {
+      background: #888;
+      &:hover {
+        background: #555;
+      }
+    }
+  }
+}

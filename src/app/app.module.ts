@@ -11,19 +11,23 @@ import { BoxService } from './shared/box.service';
 import { HttpClientModule } from '@angular/common/http';
 
 import {MatButtonModule} from '@angular/material/button';
+import {ScrollingModule} from '@angular/cdk/scrolling';
+import { RecentBoxOpeningsComponent } from './details-view/components/recent-box-openings.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DetailsViewComponent,
-    BoxMetaComponent
+    BoxMetaComponent,
+    RecentBoxOpeningsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    MatButtonModule
+    MatButtonModule,
+    ScrollingModule
   ],
   providers: [
     BoxService

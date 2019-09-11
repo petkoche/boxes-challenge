@@ -5,6 +5,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { BoxMetaModel } from './models/box-meta.model';
 import { DataWrapper } from './models/data-wrapper.model';
+import { BoxEdgeModel } from './models/box-edge.model';
 
 @Injectable({
     providedIn: 'root'
@@ -18,6 +19,16 @@ export class BoxService {
             map(res => {
                 console.log(res);
                 return res.data.box;
+            }
+            )
+        );
+    }
+
+    getBoxStream(): Observable<BoxEdgeModel> {
+        return this.http.get<DataWrapper>(environment.boxStreamUrl).pipe(
+            map(res => {
+                console.log(res);
+                return res.data.boxOpenings.edges;
             }
             )
         );

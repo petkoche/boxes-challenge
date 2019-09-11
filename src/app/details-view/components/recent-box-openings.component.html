@@ -1,0 +1,28 @@
+<header>
+    <h3>Recent box openings</h3>
+</header>
+
+<div class="virtual-scroll">
+    <cdk-virtual-scroll-viewport orientation="horizontal" itemSize="50" class="virtual-scroll__viewport">
+        <div *cdkVirtualFor="let edge of edges" class="virtual-scroll__item" (mouseenter)="edge.show = true" (mouseleave)="edge.show = false">
+            <div class="container-box">
+                <div class="container-box__item" *ngIf="!edge.show">
+                    <div class="container-box__label">{{(edge.node.itemVariant.name.length>18)? (edge.node.itemVariant.name | slice:0:18)+'..':(edge.node.itemVariant.name)}} </div>
+                    <div class="container-box__rarity container-box__rarity__bg"></div>
+                    <div class="img__wrap">
+                        <img class="img__product img__rotate" src="{{edge.node.itemVariant.iconUrl}}">
+                    </div>
+                </div>
+                <div class="container-box__item" *ngIf="edge.show">
+                    <div class="container-box__label">{{edge.node.box.slug}}</div>
+                    <div class="container-box__rarity container-box__rarity__bg"></div>
+                    <div class="img__wrap">
+                        <img class="img__product img__rotate" src="{{edge.node.box.iconUrl}}">
+                    </div>
+                    <div class="container-box__img-user" [ngStyle]="{'background': 'url(' + edge.node.user.avatar + ') no-repeat 0 0 / cover'}" >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </cdk-virtual-scroll-viewport>
+</div>
