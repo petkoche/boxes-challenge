@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DetailsViewComponent } from './details-view/components/details-view.component';
+import { BoxMetaComponent } from './details-view/components/box-meta.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DetailsViewComponent
+    DetailsViewComponent,
+    BoxMetaComponent
   ],
   imports: [
     BrowserModule,
