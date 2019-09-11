@@ -19,7 +19,6 @@ export class RecentBoxOpeningsComponent implements OnInit {
 
     ngOnInit() {
         this.api.getBoxStream().subscribe(res => {
-            console.log("nodes", res);
             this.edges = res;
         })
     }
