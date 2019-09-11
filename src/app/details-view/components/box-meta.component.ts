@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core'
+import { BoxService } from 'src/app/shared/box.service';
 
 @Component({
     selector: 'app-box-meta',
@@ -8,8 +9,22 @@ import { Component, OnInit } from '@angular/core'
 
 export class BoxMetaComponent implements OnInit {
 
-    constructor() {}
+    constructor(private api: BoxService) {}
 
+    box: any;
     ngOnInit() {
+        this.api.getBoxMeta().subscribe(res => {
+            this.box = res;
+        })
+    }
+
+    private getInt(n){
+        return n | 0;
+    }
+
+    private getAfterDecimal(n){
+        n = Math.abs(n);
+        var decimal = ((n - Math.floor(n))*100).toFixed(0);
+        return decimal;
     }
 }

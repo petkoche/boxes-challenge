@@ -6,6 +6,11 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DetailsViewComponent } from './details-view/components/details-view.component';
 import { BoxMetaComponent } from './details-view/components/box-meta.component';
+import { BoxService } from './shared/box.service';
+
+import { HttpClientModule } from '@angular/common/http';
+
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -16,9 +21,13 @@ import { BoxMetaComponent } from './details-view/components/box-meta.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule,
+    MatButtonModule
   ],
-  providers: [],
+  providers: [
+    BoxService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
