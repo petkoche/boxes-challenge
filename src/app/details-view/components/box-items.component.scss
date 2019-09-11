@@ -1,6 +1,3 @@
-.img-container {
-}
-
 .item {
   width: 95%;
   height: 95%;
@@ -29,6 +26,11 @@
     &__bg {
       background: #84579d;
     }
+  }
+
+  &__button{
+      width: 100%;
+      top: 50%;
   }
 
   &__texts {

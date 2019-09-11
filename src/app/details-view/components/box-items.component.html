@@ -3,8 +3,8 @@
 </header>
 
 <mat-grid-list [cols]="breakPoint" rowHeight="1:2" (window:resize)="onResize($event)">
-    <mat-grid-tile *ngFor="let edge of edges">
-        <div class="item">
+    <mat-grid-tile *ngFor="let edge of edges" (mouseenter)="edge.show = true" (mouseleave)="edge.show = false">
+        <div class="item" [@expandOnEnter]="{ value: '', params: { duration: 300, delay: 15, translate: '30px' } }">
             <div class="item__img-container">
                 <img class="item__img" src="{{edge.node.item.iconUrl}}">
                 <div class="item__texts">
@@ -14,8 +14,12 @@
                             <span class="item__texts__value__whole">€{{getInt(edge?.node.item.value)}}</span>
                             <span class="item__texts__value__remainder">.{{getAfterDecimal(edge?.node.item.value)}}</span></div>
                 </div>
+
                 <div class="item__rarity item__rarity__bg"></div>
             </div>
+            <button mat-flat-button color="primary" class="item__button" *ngIf="edge.show" [@fadeInUpOnEnter] [@fadeOutUpOnLeave]>
+                    <span class="mat-button-wrapper"> view item </span>
+            </button>
         </div>
     </mat-grid-tile>
 </mat-grid-list>

@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core'
 import { BoxService } from 'src/app/shared/box.service';
 import { BoxItemEdgeModel } from 'src/app/shared/models/box-item-edge.model';
+import { expandOnEnterAnimation, fadeInUpOnEnterAnimation, fadeOutUpOnLeaveAnimation } from 'angular-animations';
 
 @Component({
     selector: 'app-box-items',
     templateUrl: './box-items.component.html',
     styleUrls: ['./box-items.component.scss'],
+    animations: [expandOnEnterAnimation(), fadeInUpOnEnterAnimation(), fadeOutUpOnLeaveAnimation()],
 })
 
 export class BoxItemsComponent implements OnInit {

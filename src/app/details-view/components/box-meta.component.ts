@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core'
 import { BoxService } from 'src/app/shared/box.service';
 import { BoxMetaModel } from 'src/app/shared/models/box-meta.model';
+import { fadeInOnEnterAnimation } from 'angular-animations';
 
 @Component({
     selector: 'app-box-meta',
     templateUrl: './box-meta.component.html',
     styleUrls: ['./box-meta.component.scss'],
+    animations:[fadeInOnEnterAnimation()]
 })
 
 export class BoxMetaComponent implements OnInit {
