@@ -12,12 +12,19 @@ export class BoxItemsComponent implements OnInit {
 
     constructor(private api: BoxService) {}
     edges: BoxItemEdgeModel[];
+    breakPoint: number;
 
     ngOnInit() {
+        this.breakPoint = (window.innerWidth <= 1200) ? Math.floor(window.innerWidth / 250) : 6;
         this.api.getBoxItems().subscribe(res => {
             console.log("nodes", res);
             this.edges = res;
         })
+    }
+    
+    onResize(event) {
+        console.log(event);
+        this.breakPoint = (event.target.innerWidth <= 1200) ? Math.floor(event.target.innerWidth / 250)  : 6;
     }
 
     private getInt(n){

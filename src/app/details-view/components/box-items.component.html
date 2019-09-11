@@ -2,7 +2,7 @@
     <h3>{{edges?.length}} in this box</h3>
 </header>
 
-<mat-grid-list cols="6" rowHeight="1:2">
+<mat-grid-list [cols]="breakPoint" rowHeight="1:2" (window:resize)="onResize($event)">
     <mat-grid-tile *ngFor="let edge of edges">
         <div class="item">
             <div class="item__img-container">
