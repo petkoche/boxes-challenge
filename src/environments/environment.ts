@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   boxMetaUrl: 'https://gist.githubusercontent.com/intellix/5411fb28c2851d30b620b8ebf5b2a1bf/raw/ffa6c6f6a8887572faead0b46a36ca97d90b3ae5/box-view-meta.json',
   boxStreamUrl: 'https://gist.githubusercontent.com/intellix/5411fb28c2851d30b620b8ebf5b2a1bf/raw/ffa6c6f6a8887572faead0b46a36ca97d90b3ae5/box-opening-stream.json',
-  boxItems: 'https://gist.githubusercontent.com/intellix/5411fb28c2851d30b620b8ebf5b2a1bf/raw/ffa6c6f6a8887572faead0b46a36ca97d90b3ae5/box-view-items.json',
+  boxItemsUrl: 'https://gist.githubusercontent.com/intellix/5411fb28c2851d30b620b8ebf5b2a1bf/raw/ffa6c6f6a8887572faead0b46a36ca97d90b3ae5/box-view-items.json',
 };
 
 /*

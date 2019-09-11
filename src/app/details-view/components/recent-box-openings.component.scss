@@ -13,14 +13,14 @@ $imageSize: 100px;
   }
   &__item {
     width: $viewPort;
-    height: 100%;    
+    height: 100%;
     writing-mode: vertical-lr;
   }
 }
 
 .container-box {
   background: white;
-  margin:5px;
+  margin: 5px;
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
   -o-transform: rotate(-90deg);
@@ -30,7 +30,7 @@ $imageSize: 100px;
   &_item {
     max-width: $viewPort;
   }
-  
+
   &__img-user {
     position: absolute;
     height: 30px;
@@ -65,20 +65,20 @@ $imageSize: 100px;
   }
 }
 
-.img{
-  &__rotate{
+.img {
+  &__rotate {
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
     -o-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
   }
-  &__product{
+  &__product {
     max-width: $imageSize;
     max-height: $imageSize;
     margin: auto;
   }
-  &__wrap{
+  &__wrap {
     min-height: $imageSize;
     min-width: $imageSize;
     padding: 40px;
@@ -91,7 +91,7 @@ img {
   margin-right: auto;
 }
 
-::-webkit{
+::-webkit {
   &-scrollbar {
     width: 0px;
     height: 5px;

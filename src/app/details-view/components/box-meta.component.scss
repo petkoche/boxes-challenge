@@ -50,15 +50,15 @@ section {
 }
 
 @media only screen and (max-width: 900px) {
-    .image{
-        &-container{
-            width: 100%
-        }
-    }
-    .info{
-        &__button{
-            width: 100%;
-            margin-top: 5px;
-        }
+  .image {
+    &-container {
+      width: 100%;
     }
   }
+  .info {
+    &__button {
+      width: 100%;
+      margin-top: 5px;
+    }
+  }
+}

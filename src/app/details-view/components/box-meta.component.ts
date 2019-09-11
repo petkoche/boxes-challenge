@@ -10,7 +10,7 @@ import { BoxMetaModel } from 'src/app/shared/models/box-meta.model';
 
 export class BoxMetaComponent implements OnInit {
 
-    constructor(private api: BoxService) {}
+    constructor(private api: BoxService) { }
 
     box: BoxMetaModel;
     ngOnInit() {
@@ -19,13 +19,13 @@ export class BoxMetaComponent implements OnInit {
         })
     }
 
-    private getInt(n){
+    private getInt(n) {
         return n | 0;
     }
 
-    private getAfterDecimal(n){
+    private getAfterDecimal(n) {
         n = Math.abs(n);
-        var decimal = ((n - Math.floor(n))*100).toFixed(0);
+        var decimal = ((n - Math.floor(n)) * 100).toFixed(0);
         return decimal;
     }
 }
