@@ -8,11 +8,11 @@
             <div class="item__img-container">
                 <img class="item__img" src="{{edge.node.item.iconUrl}}">
                 <div class="item__texts">
-                    <div class="item__texts__brand"><strong>{{edge?.node.item.brand}}</strong></div>
-                    <div class="item__texts__name">{{(edge?.node.item.name.length>18)? (edge?.node.item.name | slice:0:18)+'..':(edge?.node.item.name)}}</div>
-                    <div class="item__texts__value">
-                            <span class="item__texts__value__whole">€{{getInt(edge?.node.item.value)}}</span>
-                            <span class="item__texts__value__remainder">.{{getAfterDecimal(edge?.node.item.value)}}</span></div>
+                    <div class="item__texts-brand"><strong>{{edge?.node.item.brand}}</strong></div>
+                    <div class="item__texts-name">{{(edge?.node.item.name.length>18)? (edge?.node.item.name | slice:0:18)+'..':(edge?.node.item.name)}}</div>
+                    <div class="item__texts-value">
+                            <span class="item__texts-value-whole">€{{getInt(edge?.node.item.value)}}</span>
+                            <span class="item__texts-value-remainder">.{{getAfterDecimal(edge?.node.item.value)}}</span></div>
                 </div>
 
                 <div class="item__rarity item__rarity__bg"></div>

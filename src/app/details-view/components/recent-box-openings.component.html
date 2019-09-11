@@ -7,14 +7,14 @@
         <div *cdkVirtualFor="let edge of edges" class="virtual-scroll__item" (mouseenter)="edge.show = true" (mouseleave)="edge.show = false">
             <div class="container-box">
                 <div class="container-box__item" [@fadeInUpOnEnter]="{ value: '', params: { duration: 300, delay: 100, translate: '30px' } }" *ngIf="!edge.show">
-                    <div class="container-box__label">{{(edge.node.itemVariant.name.length>18)? (edge.node.itemVariant.name | slice:0:18)+'..':(edge.node.itemVariant.name)}} </div>
+                    <div class="container-box__label">{{(edge?.node.itemVariant.name.length>18)? (edge.node.itemVariant.name | slice:0:18)+'..':(edge.node.itemVariant.name)}} </div>
                     <div class="container-box__rarity container-box__rarity__bg"></div>
                     <div class="img__wrap">
                         <img class="img__product img__rotate" src="{{edge.node.itemVariant.iconUrl}}">
                     </div>
                 </div>
                 <div class="container-box__item"  [@fadeInUpOnEnter]="{ value: '', params: { duration: 300, delay: 100, translate: '30px' } }"  *ngIf="edge.show">
-                    <div class="container-box__label">{{edge.node.createdAt | date}}</div>
+                    <div class="container-box__label">{{edge?.node.createdAt | date}}</div>
                     <div class="container-box__rarity container-box__rarity__bg"></div>
                     <div class="img__wrap">
                         <img class="img__product img__rotate" src="{{edge.node.box.iconUrl}}">

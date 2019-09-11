@@ -3,9 +3,11 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { ToastrModule } from 'ngx-toastr';
 
 import { BoxService } from './shared/box.service';
+import { ErrorInterceptor } from './shared/error-interceptor.service';
 
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
@@ -34,10 +36,16 @@ import { DetailsViewComponent } from './details-view/components/details-view.com
     MatButtonModule,
     ScrollingModule,
     MatGridListModule,
-    MatCardModule
+    MatCardModule,
+    ToastrModule.forRoot(),
   ],
   providers: [
-    BoxService
+    BoxService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ErrorInterceptor,
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })
