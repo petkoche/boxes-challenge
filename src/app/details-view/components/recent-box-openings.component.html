@@ -14,7 +14,7 @@
                     </div>
                 </div>
                 <div class="container-box__item" *ngIf="edge.show">
-                    <div class="container-box__label">{{edge.node.box.slug}}</div>
+                    <div class="container-box__label">{{edge.node.createdAt | date}}</div>
                     <div class="container-box__rarity container-box__rarity__bg"></div>
                     <div class="img__wrap">
                         <img class="img__product img__rotate" src="{{edge.node.box.iconUrl}}">

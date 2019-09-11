@@ -1,0 +1,21 @@
+<header>
+    <h3>{{edges?.length}} in this box</h3>
+</header>
+
+<mat-grid-list cols="6" rowHeight="1:2">
+    <mat-grid-tile *ngFor="let edge of edges">
+        <div class="item">
+            <div class="item__img-container">
+                <img class="item__img" src="{{edge.node.item.iconUrl}}">
+                <div class="item__texts">
+                    <div class="item__textes__brand"><strong>{{edge?.node.item.brand}}</strong></div>
+                    <div class="item__textes__name">{{(edge?.node.item.name.length>18)? (edge?.node.item.name | slice:0:18)+'..':(edge?.node.item.name)}}</div>
+                    <div class="item__textes__value">
+                            <span class="item__textes__value__whole">€{{getInt(edge?.node.item.value)}}</span>
+                            <span class="item__textes__value__remainder">.{{getAfterDecimal(edge?.node.item.value)}}</span></div>
+                </div>
+                <div class="item__rarity item__rarity__bg"></div>
+            </div>
+        </div>
+    </mat-grid-tile>
+</mat-grid-list>

@@ -12,7 +12,7 @@ import { BoxEdgeModel } from 'src/app/shared/models/box-edge.model';
 export class RecentBoxOpeningsComponent implements OnInit {
 
     constructor(private api: BoxService) {}
-    edges: BoxEdgeModel;
+    edges: BoxEdgeModel[];
     show = false;
 
     ngOnInit() {

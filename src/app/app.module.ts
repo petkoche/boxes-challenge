@@ -9,17 +9,21 @@ import { BoxMetaComponent } from './details-view/components/box-meta.component';
 import { BoxService } from './shared/box.service';
 
 import { HttpClientModule } from '@angular/common/http';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatCardModule} from '@angular/material/card';
 
 import {MatButtonModule} from '@angular/material/button';
 import {ScrollingModule} from '@angular/cdk/scrolling';
 import { RecentBoxOpeningsComponent } from './details-view/components/recent-box-openings.component';
+import { BoxItemsComponent } from './details-view/components/box-items.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DetailsViewComponent,
     BoxMetaComponent,
-    RecentBoxOpeningsComponent
+    RecentBoxOpeningsComponent,
+    BoxItemsComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +31,9 @@ import { RecentBoxOpeningsComponent } from './details-view/components/recent-box
     BrowserAnimationsModule,
     HttpClientModule,
     MatButtonModule,
-    ScrollingModule
+    ScrollingModule,
+    MatGridListModule,
+    MatCardModule
   ],
   providers: [
     BoxService
